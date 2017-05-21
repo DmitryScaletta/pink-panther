@@ -431,7 +431,7 @@
     }
 
     @media (min-width: $screen-md) {
-      padding: 40px;
+      padding: 40px 40px 60px;
       width: $container-max-md;
     }
   }
@@ -491,6 +491,7 @@
       .ss-selected-option {
         color: $color-secondary-dark;
         border-color: #a0a0a0;
+        background-color: #fff;
         transition: border-color $transition-duration $transition-function;
       }
 
@@ -549,7 +550,7 @@
     text-align: center;
 
     @media (min-width: $screen-md) {
-      padding: 34px 0 20px;
+      padding-top: 34px;
     }
   }
 }

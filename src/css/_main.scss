@@ -4,6 +4,7 @@
 }
 
 .page-section {
+  position: relative;
   overflow: hidden;
 
   &--dark {
@@ -21,6 +22,26 @@
 
   &--bright {
     background: #ebebeb;
+  }
+
+  &--image {
+    background: #ccc;
+
+    &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 50%;
+      top: 0;
+      bottom: 0;
+      background: url("../img/roses.jpg") center no-repeat;
+      background-size: cover;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
   }
 
   &__inner {
@@ -531,4 +552,23 @@
   display: block;
   border: none;
   width: 100%;
+}
+
+
+// order section
+.order-section {
+  @include grid-row;
+
+  &__inner {
+    @include grid-column(12, md 10, lg 6, xl 4);
+    @include grid-column-modifier(push, md 1, lg 6, xl 7);
+  }
+
+  &__title {
+    margin: 0;
+    padding: 10px 0;
+    color: #3e3e3e;
+  }
+
+  // &__content {}
 }

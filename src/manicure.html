@@ -185,9 +185,43 @@
   </div>
 </section>
 
-<section class="page-section" style="height: 640px; background: #ccc;">
+<section class="page-section page-section--image">
   <div class="page-section__inner">
-    form
+    <section class="order-section">
+      <div class="order-section__inner">
+        <h2 class="order-section__title">Записаться</h2>
+        <div class="order-section__content">
+          <form action="#" class="form">
+            <div class="form__group">
+              <label class="form__label">Имя</label>
+              <input name="name" type="text" class="form__input" placeholder="Наталья">
+            </div>
+            <div class="form__group">
+              <label class="form__label">Телефон</label>
+              <input name="phone" type="text" class="form__input" placeholder="+7 (___) ___ - __ - __">
+            </div>
+            <div class="form__group">
+              <label class="form__label">Дата</label>
+              <input type="date" class="form__input form__input--date">
+            </div>
+            <div class="form__group">
+              <label class="form__label">Время</label>
+              <input type="time" class="form__input form__input--time">
+            </div>
+            <div class="form__group">
+              <label class="form__label">Салон</label>
+              <select name="address" class="select">
+                <option>Восточно-кругликовская, 22 ЖК Панорама</option>
+                <option>Бабушкина, 252, 3-й этаж</option>
+                <option>ул. Автолюбителей, 1/д, стр.2 (ГМР)</option>
+              </select>
+            </div>
+            <div class="form__footer">
+              <button class="button">Отправить</button>
+            </div>
+          </form>
+      </div>
+    </div>  
   </div>
 </section>
 
