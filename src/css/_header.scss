@@ -115,7 +115,7 @@
 .main-menu {
   background: $color-secondary-dark;
   position: relative;
-  z-index: 10;
+  z-index: 100;
 
   &--fixed {
     position: fixed;
@@ -509,8 +509,9 @@
 
   &__input {
     position: relative;
-    width: 100%;
     padding: 8px 10px;
+    width: 100%;
+    max-height: 42px;
     font-family: $font-primary;
     line-height: inherit;
     color: $color-secondary-dark;
