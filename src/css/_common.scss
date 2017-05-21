@@ -129,9 +129,7 @@ img {
   }
 }
 
-// .table {}
-
-.table-prices {
+.table {
   margin: 0 0 1px;
 
   th:last-child,
@@ -139,7 +137,34 @@ img {
     text-align: right;
     white-space: nowrap;
   }
+
+  &--dropdown {
+    thead {
+      cursor: pointer;
+
+      th:last-child::before {
+        @extend .icon;
+
+        content: $icon-angle-down;
+      }
+    }
+
+    tbody {
+      display: none;
+    }
+  }
+
+  &--opened {
+    thead th:last-child::before {
+      content: $icon-angle-up;
+    }
+
+    tbody {
+      display: table-row-group
+    }
+  }
 }
+
 
 // styleselect
 .select {

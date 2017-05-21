@@ -134,3 +134,29 @@ const styleSelect = require('styleselect');
     elem => elem.addEventListener('click', toggleModalWindow),
   );
 })();
+
+
+// dropdown table
+(() => {
+  const dropdownTables = document.getElementsByClassName('table--dropdown');
+  
+  const toggleTable = (table) => {
+    const tableOpenedClass = 'table--opened';
+
+    if (table.classList.contains(tableOpenedClass)) {
+      table.classList.remove(tableOpenedClass);
+    } else {
+      table.classList.add(tableOpenedClass);
+    }
+  }
+  
+  Array.prototype.forEach.call(
+    dropdownTables,
+    (table) => {
+      const thead = table.querySelector('thead');
+      if (thead === null) return;
+
+      thead.addEventListener('click', toggleTable.bind(null, table));
+    },
+  );
+})();
