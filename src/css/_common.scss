@@ -9,10 +9,10 @@
 
 html {
   height: 100%;
-  font-size: 19px;
+  font-size: 18px;
 
   @media (min-width: $screen-md) {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   @media (min-width: $screen-lg) {
@@ -167,10 +167,6 @@ img {
 
 
 // styleselect
-.select {
-  display: none;
-}
-
 .style-select {
   width: auto;
   font-family: $font-primary;
