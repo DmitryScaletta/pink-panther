@@ -63,7 +63,45 @@
 
 // slider
 (() => {
-  //
+  const SLIDER_INTERVAL = 4000;
+
+  const slider = document.querySelector('.slider');
+  if (slider === null) return;
+
+  const slides = slider.getElementsByClassName('slider__item');
+  const dots   = slider.getElementsByClassName('slider__dot');
+  const slidesCount = slides.length;
+  if (slidesCount === 0) return;
+
+  let   currentSlideIndex = 0;
+  let   timeCounter       = 0;
+  const activeSlideClass  = 'slider__item--active';
+  const activeDotClass    = 'slider__dot--active';
+
+  const setCurrentSlide = (newSlideIndex) => {
+    slides[currentSlideIndex].classList.remove(activeSlideClass);
+    dots  [currentSlideIndex].classList.remove(activeDotClass);
+    slides[newSlideIndex].classList.add(activeSlideClass);
+    dots  [newSlideIndex].classList.add(activeDotClass);
+    currentSlideIndex = newSlideIndex;
+    timeCounter = 0;
+  };
+
+  const showNextSlide = () => setCurrentSlide((currentSlideIndex === slidesCount - 1) ? 0 : currentSlideIndex + 1);
+  const showPrevSlide = () => setCurrentSlide((currentSlideIndex === 0) ? slidesCount - 1 : currentSlideIndex - 1);
+
+  Array.prototype.forEach.call(
+    dots,
+    (dot, dotIndex) => dot.addEventListener('click', setCurrentSlide.bind(null, dotIndex)),
+  );
+
+  const tick = 16;
+  setInterval(() => {
+    timeCounter += tick;
+    if (timeCounter >= SLIDER_INTERVAL) showNextSlide();
+  }, tick);
+
+  // setInterval(showNextSlide, SLIDER_INTERVAL);
 })();
 
 
@@ -72,7 +110,7 @@ const styleSelect = require('styleselect');
 
 (() => {
   Array.prototype.forEach.call(
-    document.querySelectorAll('select.select'), 
+    document.querySelectorAll('select.select'),
     select => styleSelect(select),
   );
 })();
