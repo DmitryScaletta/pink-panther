@@ -1,0 +1,160 @@
+.footer {
+  overflow: hidden;
+}
+
+.footer-top {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: url("../img/footer-bg.png") top center no-repeat;
+  background-color: #373737;
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 62px;
+  }
+
+  &__inner {
+    @include grid-container;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__logo {
+    @include grid-column(12, lg 3);
+
+    padding-top: 21px;
+    padding-bottom: 21px;
+    text-align: center;
+  }
+
+  &__services {
+    @include grid-column(12, md 6, lg 5);
+
+    display: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    @include grid-row;
+  }
+
+  &__contacts {
+    @include grid-column(12, md 6, lg 4);
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 20px;
+  }
+
+  &__title {
+    margin: 0 0 15px;
+    padding-bottom: 8px;
+    font-size: 24px;
+    color: #fff;
+    text-transform: none;
+    border-bottom: 1px solid $color-primary;
+  }
+}
+
+.footer-menu {
+  @include grid-column(7);
+
+  &:last-child {
+    @include grid-column(5);
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding-bottom: 9px;
+  }
+
+  &__link {
+    color: #a7a7a7;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.footer-contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    padding-bottom: 10px;
+  }
+
+  &__phone {
+    padding-right: 15px;
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.footer-bottom {
+  padding: 10px 0 9px;
+  background: $color-secondary-dark;
+
+  &__inner {
+    @include grid-container;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__copy-text {
+    @include grid-column(12, lg 4);
+
+    padding: 14px 0;
+    color: $color-secondary-light;
+    font-size: 16px;
+    text-align: center;
+
+    @media (min-width: $screen-sm) {
+      white-space: nowrap;
+    }
+  }
+
+  &__socials {
+    @include grid-column(12, lg 4);
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+
+  &__copy-logo {
+    @include grid-column(12, lg 4);
+
+    text-align: center;
+    line-height: 50px;
+
+    @media (min-width: $screen-lg) {
+      text-align: right;
+    }
+  }
+
+  &__copy-link {
+    display: inline-block;
+    width: 106px;
+    height: 21px;
+    background: url("../img/logo-art6.svg") 0 0 no-repeat;
+  }
+}

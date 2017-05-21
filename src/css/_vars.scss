@@ -1,0 +1,89 @@
+$screen-sm:             576px;
+$screen-md:             768px;
+$screen-lg:             992px;
+$screen-xl:             1200px;
+
+$container-max-sm:      540px;
+$container-max-md:      720px;
+$container-max-lg:      960px;
+$container-max-xl:      1170px;
+
+$color-primary:         #df3d7b;
+$color-primary-light:   lighten(saturate($color-primary, 30%), 41%);
+
+$color-secondary-dark:  #262626;
+$color-secondary-light: scale-color(lighten($color-secondary-dark, 40.8%), $green: -5%, $blue: -3.8%); // #8e8789
+$color-secondary-700:   lighten($color-secondary-dark, 6.8%);  // #373737
+$color-secondary-600:   lighten($color-secondary-dark, 9.5%);  // #3e3e3e
+$color-secondary-500:   lighten($color-secondary-dark, 50.5%); // #a7a7a7
+$color-secondary-400:   lighten($color-secondary-dark, 65%);   // #ccc
+$color-secondary-300:   lighten($color-secondary-dark, 77.2%); // #ebebeb
+$color-secondary-200:   lighten($color-secondary-dark, 80.5%); // #f3f3f3
+$color-secondary-100:   lighten($color-secondary-dark, 85%);   // #fff
+
+$transition-duration:   0.2s;
+$transition-function:   linear;
+
+$font-primary:          'PT Sans Narrow', sans-serif;
+
+$global-line-height:    1.37;
+$navbar-height:         60px;
+
+// grid
+$grid-gutter-width-base: 30px;
+
+$grid-breakpoints: (
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg,
+  xl: $screen-xl,
+);
+
+$container-max-widths: (
+  sm: $container-max-sm,
+  md: $container-max-md,
+  lg: $container-max-lg,
+  xl: $container-max-xl,
+);
+
+// icons
+$icon-close: "\f00d";
+$icon-remove: "\f00d";
+$icon-times: "\f00d";
+$icon-clock-o: "\f017";
+$icon-calendar: "\f073";
+$icon-facebook-square: "\f082";
+$icon-bars: "\f0c9";
+$icon-navicon: "\f0c9";
+$icon-reorder: "\f0c9";
+$icon-angle-left: "\f104";
+$icon-angle-right: "\f105";
+$icon-angle-up: "\f106";
+$icon-angle-down: "\f107";
+$icon-instagram: "\f16d";
+$icon-vk: "\f189";
+
+$browser-context: 22; // default font-size
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{strip-unit($pixels)/$context}rem;
+}
+
+// styleselect
+$ss-line-height: $global-line-height;
+$ss-border-width: 1px;
+// $ss-spacing: 20px;
+$ss-highlight-color: #fff;
+$ss-selected-option-background: #fff;
+$ss-dropdown-shadow: none;
+$ss-standard-border: $ss-border-width solid #ddd5d7;
+// $ss-spacing-small: $ss-spacing / 2;
+// $ss-spacing-tiny:  $ss-spacing / 4;

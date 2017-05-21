@@ -1,0 +1,14 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "vars";
+@import "fonts";
+@import "grid";
+@import "icomoon";
+@import "../../node_modules/styleselect/scss/styleselect";
+
+// styles
+@import "typography";
+@import "common";
+@import "header";
+@import "main";
+@import "footer";
+
