@@ -507,6 +507,7 @@
   }
 
   &__input {
+    position: relative;
     width: 100%;
     padding: 8px 10px;
     font-family: $font-primary;
@@ -518,6 +519,28 @@
 
     &:focus {
       border-color: $color-primary;
+    }
+
+    &--date,
+    &--time {
+      padding-right: 30px;
+
+      &:after {
+        @extend .icon;
+        
+        position: absolute;
+        right: 10px;
+        color: #8e8789;
+        font-size: 16px;
+      }
+    }
+
+    &--date:after {
+      content: $icon-calendar;
+    }
+
+    &--time:after {
+      content: $icon-clock-o;
     }
   }
 

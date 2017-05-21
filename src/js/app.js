@@ -96,7 +96,7 @@
     (dot, dotIndex) => dot.addEventListener('click', setCurrentSlide.bind(null, dotIndex)),
   );
 
-  const tick = 16;
+  const tick = 1000 / 30; // 30 times per second
   setInterval(() => {
     timeCounter += tick;
     if (timeCounter >= SLIDER_INTERVAL) showNextSlide();
