@@ -420,7 +420,9 @@
     position: relative;
     margin: 0 10px;
     padding: 15px;
-    background: #fff;
+    background: url("../img/modal-bg.png") center no-repeat;
+    background-size: cover;
+    background-color: #fff;
 
     @media (min-width: $screen-sm) {
       margin: auto;
@@ -431,10 +433,6 @@
     @media (min-width: $screen-md) {
       padding: 40px;
       width: $container-max-md;
-    }
-
-    @media (min-width: $screen-lg) {
-      width: 750px;
     }
   }
 

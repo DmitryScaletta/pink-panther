@@ -43,6 +43,7 @@
   if (mainMenuOverlay !== null) mainMenuOverlay.addEventListener('click', toggleMobileMenu);
 })();
 
+
 // iframe height fix
 (() => {
   const iframeActualHeight = (iframeId) => {
@@ -100,8 +101,6 @@
     timeCounter += tick;
     if (timeCounter >= SLIDER_INTERVAL) showNextSlide();
   }, tick);
-
-  // setInterval(showNextSlide, SLIDER_INTERVAL);
 })();
 
 
