@@ -27,7 +27,7 @@
   &--image {
     background: #ccc;
 
-    &:after {
+    &::after {
       content: "";
       display: none;
       position: absolute;
@@ -42,6 +42,11 @@
         display: block;
       }
     }
+  }
+
+  &--instagram {
+    background: url('../img/instagram-bg.jpg') center no-repeat;
+    background-size: cover;
   }
 
   &__inner {
@@ -561,6 +566,38 @@
 }
 
 // instagram 
+.instagram-section {
+  // padding: 15px 0;
+
+  @media (min-width: $screen-md) {
+    // padding: 31px 0;
+  }
+
+  &__header {
+    padding: 12px 0 19px;
+    font-size: 26px;
+    color: #424242;
+
+    @media (min-width: $screen-lg) {
+      padding: 16px 0 31px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__instagram-link {
+    color: #424242;
+    text-transform: none;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
 .iframe-instagram {
   display: block;
   border: none;

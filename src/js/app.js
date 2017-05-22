@@ -139,7 +139,7 @@ const styleSelect = require('styleselect');
 // dropdown table
 (() => {
   const dropdownTables = document.getElementsByClassName('table--dropdown');
-  
+
   const toggleTable = (table) => {
     const tableOpenedClass = 'table--opened';
 
@@ -148,8 +148,8 @@ const styleSelect = require('styleselect');
     } else {
       table.classList.add(tableOpenedClass);
     }
-  }
-  
+  };
+
   Array.prototype.forEach.call(
     dropdownTables,
     (table) => {

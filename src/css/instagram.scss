@@ -1,104 +1,38 @@
 @import "vars";
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  padding: 0;
-  font-family: $font-primary;
-  width: 100%;
-  max-height: 622px;
   overflow: hidden;
 }
 
 .images {
-  padding: 15px 0;
-  background: url('../img/instagram-bg.jpg') center no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 0;
 
-  @media (min-width: $screen-md) {
-    padding: 31px 0;
-  }
-
-  &__inner {
-    margin: 0 auto;
-    padding: 0 $grid-gutter-width-base / 2;
-
-    @media (min-width: $screen-sm) {
-      width: $container-max-sm;
-    }
-
-    @media (min-width: $screen-md) {
-      width: $container-max-md;
-    }
-
-    @media (min-width: $screen-lg) {
-      width: $container-max-lg;
-    }
-
-    @media (min-width: $screen-xl) {
-      width: $container-max-xl;
-    }
-  }
-
-  &__header {
-    padding-bottom: 15px;
-    font-size: 26px;
-    color: #424242;
-    height: 46px;
-    line-height: 46px;
-
-    @media (min-width: $screen-md) {
-      margin-bottom: 31px;
-    }
-  }
-
-  &__title {
-    margin: 0;
-    font-weight: normal;
-    text-transform: uppercase;
-    font-size: inherit;
-  }
-
-  &__instagram-link {
-    color: #424242;
-    text-transform: none;
-    text-decoration: none;
-    transition: color $transition-duration $transition-function;
-
-    &:hover {
-      color: $color-primary;
-    }
-  }
-
-  &__items {
-    display: flex;
-    flex-wrap: wrap;
+  @media (min-width: $screen-lg) {
     justify-content: space-between;
-    font-size: 0;
-    margin-bottom: 18px;
   }
 
   &__item {
+    box-sizing: border-box;
     display: block;
     margin-bottom: 10px;
-    flex-basis: calc(100% / 2);
+    flex-basis: auto;
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-sm) {
+      flex-basis: calc(100% / 3);
       margin-bottom: 30px;
     }
 
     @media (min-width: $screen-md) {
-      flex-basis: calc(100% / 3);
-    }
-
-    @media (min-width: $screen-lg) {
-      flex-basis: calc(100% / 6);
+      flex-basis: auto;
     }
   }
 
   &__image {
+    box-sizing: border-box;
     display: block;
     margin: 0 auto;
     max-width: 100%;
