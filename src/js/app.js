@@ -1,3 +1,5 @@
+import Tooltip from 'tooltip.js';
+
 // fixed main menu
 (() => {
   const header         = document.querySelector('.header');
@@ -48,8 +50,10 @@
 (() => {
   const iframeActualHeight = (iframeId) => {
     const setActualHeight = (iframe) => {
+      /* eslint-disable no-param-reassign */
       iframe.style.height = 0;
       iframe.style.height = `${iframe.contentWindow.document.body.scrollHeight}px`;
+      /* eslint-enable no-param-reassign */
     };
 
     const iframe = document.getElementById(iframeId);
@@ -89,7 +93,7 @@
   };
 
   const showNextSlide = () => setCurrentSlide((currentSlideIndex === slidesCount - 1) ? 0 : currentSlideIndex + 1);
-  const showPrevSlide = () => setCurrentSlide((currentSlideIndex === 0) ? slidesCount - 1 : currentSlideIndex - 1);
+  // const showPrevSlide = () => setCurrentSlide((currentSlideIndex === 0) ? slidesCount - 1 : currentSlideIndex - 1);
 
   Array.prototype.forEach.call(
     dots,
@@ -159,4 +163,46 @@ const styleSelect = require('styleselect');
       thead.addEventListener('click', toggleTable.bind(null, table));
     },
   );
+})();
+
+
+// form validation example
+(() => {
+  const form = document.getElementById('pupup-order-form');
+  if (form === null) return;
+
+  const validatedItems = [
+    form.querySelector('input[name=name]'),
+    form.querySelector('input[name=phone]'),
+  ];
+
+  const tooltips = validatedItems.map(item => new Tooltip(item, {
+    title: 'Пожалуйста, заполните обязательное поле',
+    trigger: '',
+  }));
+
+  const inputInvalidClass = 'form__input--invalid';
+
+  // remove invalid class on focus
+  validatedItems.forEach((elem, index) => {
+    elem.addEventListener('focus', () => {
+      if (elem.classList.contains(inputInvalidClass)) elem.classList.remove(inputInvalidClass);
+      tooltips[index].hide();
+    });
+  });
+
+  const validateTextInput = value => value.trim() !== '';
+
+  form.addEventListener('submit', (e) => {
+    const formValid = validatedItems.every((item, index) => {
+      const isItemValid = validateTextInput(item.value);
+      if (!isItemValid) {
+        item.classList.add(inputInvalidClass);
+        tooltips[index].show();
+      }
+      return isItemValid;
+    });
+
+    if (!formValid) e.preventDefault();
+  });
 })();

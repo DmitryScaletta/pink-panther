@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -84,25 +84,25 @@
     </div>
   </nav>
 
-  <div id="order-window" class="modal">
+  <div class="modal">
     <section class="modal__content">
       <h2 class="modal__title">Записаться</h2>
       <i class="icon icon-close modal__close"></i>
       <div class="modal__form">
-        <form action="#" class="form">
+        <form id="pupup-order-form" action="#" class="form">
           <div class="form__items">
             <div class="form__section">
               <div class="form__group">
                 <label class="form__label">Имя</label>
-                <input name="name" type="text" class="form__input" placeholder="Наталья" required>
+                <input name="name" type="text" class="form__input" placeholder="Наталья">
               </div>
               <div class="form__group">
                 <label class="form__label">Телефон</label>
-                <input name="phone" type="text" class="form__input" placeholder="+7 (___) ___ - __ - __" required>
+                <input name="phone" type="text" class="form__input" placeholder="+7 (___) ___ - __ - __">
               </div>
               <div class="form__group">
                 <label class="form__label">Услуга</label>
-                <select name="service" class="form__input select" required>
+                <select name="service" class="form__input select">
                   <option>Маникюр</option>
                   <option>Педикюр</option>
                   <option>Коррекция фигуры</option>
@@ -120,11 +120,11 @@
               </div>
               <div class="form__group">
                 <label class="form__label">Дата</label>
-                <input type="date" class="form__input form__input--date" required>
+                <input type="date" class="form__input form__input--date">
               </div>
               <div class="form__group">
                 <label class="form__label">Время</label>
-                <input type="time" class="form__input form__input--time" required>
+                <input type="time" class="form__input form__input--time">
               </div>
             </div>
           </div>
