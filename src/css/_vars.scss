@@ -10,6 +10,7 @@ $container-max-xl:      1170px;
 
 $color-primary:         #df3d7b;
 $color-primary-light:   lighten(saturate($color-primary, 30%), 41%);
+$color-primary-hover:   darken($color-primary, 15%);
 
 $color-secondary-dark:  #262626;
 $color-secondary-light: scale-color(lighten($color-secondary-dark, 40.8%), $green: -5%, $blue: -3.8%); // #8e8789

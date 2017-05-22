@@ -96,6 +96,10 @@
         padding-right: 0;
       }
     }
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 
   &__socials {
@@ -115,14 +119,13 @@
 .main-menu {
   background: $color-secondary-dark;
   position: relative;
-  z-index: 100;
+  z-index: 50;
 
   &--fixed {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    // z-index: 10;
 
     /* .main-menu__link {
       line-height: 40px;
@@ -211,6 +214,12 @@
 
       @media (min-width: $screen-lg) {
         background: $color-primary;
+      }
+    }
+
+    &--highlighted:hover {
+      @media (min-width: $screen-lg) {
+        background: $color-primary-hover;
       }
     }
 
@@ -469,7 +478,7 @@
   &__items {
     display: flex;
     flex-direction: column;
-    
+
     @media (min-width: $screen-md) {
       flex-direction: row;
     }
@@ -487,6 +496,7 @@
 
   &__group {
     padding-bottom: 6px;
+
     .style-select {
       .ss-selected-option {
         color: $color-secondary-dark;
@@ -527,9 +537,9 @@
     &--time {
       padding-right: 30px;
 
-      &:after {
+      &::after {
         @extend .icon;
-        
+
         position: absolute;
         right: 10px;
         color: #8e8789;
@@ -537,11 +547,11 @@
       }
     }
 
-    &--date:after {
+    &--date::after {
       content: $icon-calendar;
     }
 
-    &--time:after {
+    &--time::after {
       content: $icon-clock-o;
     }
   }
