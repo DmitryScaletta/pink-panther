@@ -130,16 +130,29 @@
 
   &__items {
     position: relative;
-    height: 620px;
+    height: 400px;
+
+    @media (min-width: $screen-sm) {
+      height: 480px;
+    }
+
+    @media (min-width: $screen-md) {
+      height: 540px;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 620px;
+    }
   }
 
   &__item {
     position: absolute;
     width: 100%;
-    height: 620px;
+    height: 100%;
     opacity: 0;
     background-position: 50% 0;
     background-repeat: no-repeat;
+    background-size: cover;
     transition: opacity 1s $transition-function;
 
     &--active {
@@ -553,7 +566,6 @@
   border: none;
   width: 100%;
 }
-
 
 // order section
 .order-section {
