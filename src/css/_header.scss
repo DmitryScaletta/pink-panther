@@ -34,7 +34,6 @@
     padding-top: 16px;
     padding-bottom: 16px;
     max-width: 100%;
-    font-size: 15px;
     text-align: center;
 
     @media (min-width: $screen-md) {
@@ -46,6 +45,7 @@
   &__address-select {
     margin: 0 auto;
     max-width: 320px;
+    font-size: 15px;
 
     @media (min-width: $screen-sm) {
       max-width: auto;
@@ -473,8 +473,6 @@
 }
 
 .form {
-  font-size: rem(18px);
-
   &__items {
     display: flex;
     flex-direction: column;
@@ -496,6 +494,7 @@
 
   &__group {
     padding-bottom: 6px;
+    font-size: rem(18px);
 
     .style-select {
       .ss-selected-option {
