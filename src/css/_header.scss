@@ -217,9 +217,22 @@
       }
     }
 
-    &--highlighted:hover {
-      @media (min-width: $screen-lg) {
-        background: $color-primary-hover;
+    &--highlighted {
+      &:hover {
+        @media (min-width: $screen-lg) {
+          background: $color-primary-hover;
+        }
+      }
+    }
+
+    &--highlighted,
+    &--active {
+      .main-menu__link:hover {
+        color: $color-primary-hover;
+
+        @media (min-width: $screen-lg) {
+          color: #fff;
+        }
       }
     }
 
