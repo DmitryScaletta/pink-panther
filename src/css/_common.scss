@@ -67,6 +67,11 @@ img {
   background: $color-primary;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background-color $transition-duration $transition-function;
+
+  &:hover {
+    background: $color-primary-hover;
+  }
 }
 
 .socials {
