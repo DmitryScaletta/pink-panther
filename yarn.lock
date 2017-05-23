@@ -2268,8 +2268,8 @@ error-ex@^1.2.0:
     is-arrayish "^0.2.1"
 
 es5-ext@^0.10.14, es5-ext@^0.10.9, es5-ext@~0.10.14:
-  version "0.10.20"
-  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.20.tgz#72a9b4fd5832797ba1bb65dceb2e25c04241c492"
+  version "0.10.21"
+  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.21.tgz#19a725f9e51d0300bbc1e8e821109fd9daf55925"
   dependencies:
     es6-iterator "2"
     es6-symbol "~3.1"
@@ -3560,8 +3560,8 @@ html-entities@^1.2.0:
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
 
 html-minifier@^3.0.3:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-3.5.0.tgz#98be1b18f87443592722f654e67a1541f22018cb"
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-3.5.1.tgz#0fbba015129b4ac9a30b887aec66f39d57cd37a9"
   dependencies:
     camel-case "3.0.x"
     clean-css "4.1.x"
@@ -4593,17 +4593,13 @@ lowercase-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
 
 lpad-align@^1.0.1:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/lpad-align/-/lpad-align-1.1.0.tgz#27fa786bcb695fc434ea1500723eb8d0bdc82bf4"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/lpad-align/-/lpad-align-1.1.2.tgz#21f600ac1c3095c3c6e497ee67271ee08481fe9e"
   dependencies:
     get-stdin "^4.0.1"
+    indent-string "^2.1.0"
     longest "^1.0.0"
-    lpad "^2.0.1"
     meow "^3.3.0"
-
-lpad@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/lpad/-/lpad-2.0.1.tgz#28316b4e7b2015f511f6591459afc0e5944008ad"
 
 lru-cache@2:
   version "2.7.3"
@@ -6934,7 +6930,7 @@ uglify-js@3.0.x:
     commander "~2.9.0"
     source-map "~0.5.1"
 
-uglify-js@^2.8.5:
+uglify-js@^2.8.27:
   version "2.8.27"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.27.tgz#47787f912b0f242e5b984343be8e35e95f694c9c"
   dependencies:
@@ -7241,8 +7237,8 @@ webpack-sources@^0.2.3:
     source-map "~0.5.3"
 
 webpack@^2.4.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.5.1.tgz#61742f0cf8af555b87460a9cd8bba2f1e3ee2fce"
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.6.0.tgz#7e650a92816abff5db5f43316b0b8b19b13d76c1"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
@@ -7261,7 +7257,7 @@ webpack@^2.4.1:
     source-map "^0.5.3"
     supports-color "^3.1.0"
     tapable "~0.2.5"
-    uglify-js "^2.8.5"
+    uglify-js "^2.8.27"
     watchpack "^1.3.1"
     webpack-sources "^0.2.3"
     yargs "^6.0.0"
