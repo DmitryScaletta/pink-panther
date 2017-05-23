@@ -374,10 +374,12 @@
     }
   }
 
-  &--hover-gray .card__image {
-    filter: grayscale(100%);
+  &--hover-gray .card {
+    .card__image {
+      filter: grayscale(100%);
+    }
 
-    &:hover {
+    &:hover .card__image {
       filter: grayscale(0);
     }
   }
