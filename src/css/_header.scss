@@ -79,21 +79,21 @@
 
   &__phones-item {
     display: inline-block;
-    padding: 0 10px;
+    margin: 0 10px;
     font-size: 20px;
     font-weight: bold;
     white-space: nowrap;
     color: #3e3e3e;
 
     @media (min-width: $screen-lg) {
-      padding: 0;
+      margin: 0;
     }
 
     @media (min-width: $screen-xl) {
-      padding-right: 48px;
+      margin-right: 48px;
 
       &:last-child {
-        padding-right: 0;
+        margin-right: 0;
       }
     }
 
